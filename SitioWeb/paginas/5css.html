@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovngarde</title> <!-- Título de la pestaña -->
+    <link rel="icon" type="imagen" href="../imagenes/favicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="../estilos.css"> <!-- Enlazo el archivo CSS externo -->
+</head>
+<body>
+
+    <header> <!-- Esta etiqueta sirve para definir la cabecera -->
+            <img src="../imagenes/skyrimTitulo.png" alt="Titulo Skyrim">
+    </header>
+
+    <div id="contenedor"> <!-- Contenedor principal, aquí meteremos todo el contenido de mi web y le daré un "ID" para que
+                            el css pueda modificarlo -->
+    
+        
+        <!-- Barra lateral izquierda -->
+        <aside id="izquierda">
+            <!-- Checkbox oculto que controla el desplegable -->
+            <input type="checkbox" id="toggle-menu" />
+
+            <!-- Label como botón (puede contener imagen y texto) -->
+            <label for="toggle-menu" class="menu-btn" aria-hidden="false">
+                <span class="menu-text">☰ Menú desplegable</span>
+            </label>
+
+            <!-- Creamos los enlaces que tendrá el menú desplegable -->
+            <div class="menu-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/2galeria.html">Fotos Galeria</a>
+                <a href="../paginas/3reservahotel.html">Reserva hotel</a>
+                <a href="../paginas/4multimedia.html">Música y vídeos</a>
+                <a href="../paginas/5css.html">Hoja de estilos</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal, menu central -->
+        <main id="centro">
+            <p style="text-align:center;"><a href="../estilos.css">Enlance para la Hoja de estilos dentro del proyecto</a></p>
+            <pre><code class="textStyles">
+                * { text-indent: 0px; margin: 0px; padding: 0px; border:0px }
+                body {
+                    text-align: center;
+                    background-color: #cccccc;
+                    font-family: Tahoma;
+                    font-size: 12px;
+                    color: #333333;
+                }
+            </code></pre>
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside id="derecha">
+            <a href="https://bethesda.net/es/dashboard" target="_blank">                        <!-- Este es el enlace de la imagen -->
+                <img src="../imagenes/bethesda.png" alt="Logo Bethesda" class="logo">    <!-- Aquí definimos la url de la img; después el texto alternativo que saldría si la img no se encuentra;
+                                                                                    y por último el ancho (width) de la imagen. En mi caso le puse un class="logo", esto lo que hace es que
+                                                                                    desde el css pueda modificarlo, al poner el mismo "class" a todas, solo tendré que definir 1 -->
+            </a>
+            <a href="https://elderscrolls.bethesda.net/es" target="_blank">
+                <img src="../imagenes/skyrim.png" alt="Logo Skyrim" class="logo">
+            </a>
+
+            <a href="https://fallout.bethesda.net/es" target="_blank">
+                <img src="../imagenes/fallout.png" alt="Logo Fallout" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/doom" target="_blank">
+                <img src="../imagenes/doom.png" alt="Logo Doom" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/starfield" target="_blank">
+                <img src="../imagenes/starfield.png" alt="Logo Starfield" class="logo">
+            </a>
+        </aside>
+
+        <!-- Pie de página -->
+        </div>
+        <footer>
+           <p>Derechos reservados © 2025 <br> <b><i>@ Ichi</i></b> / Jose Aguilar</p>
+        </footer>
+</body>
+</html>

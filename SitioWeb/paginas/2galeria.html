@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovngarde</title> <!-- Título de la pestaña -->
+    <link rel="icon" type="imagen" href="../imagenes/favicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="../estilos.css"> <!-- Enlazo el archivo CSS externo -->
+</head>
+<body>
+
+    <header> <!-- Esta etiqueta sirve para definir la cabecera -->
+            <img src="../imagenes/skyrimTitulo.png" alt="Titulo Skyrim">
+    </header>
+
+    <div id="contenedor"> <!-- Contenedor principal, aquí meteremos todo el contenido de mi web y le daré un "ID" para que
+                            el css pueda modificarlo -->
+    
+        
+        <!-- Barra lateral izquierda -->
+        <aside id="izquierda">
+            <!-- Checkbox oculto que controla el desplegable -->
+            <input type="checkbox" id="toggle-menu" />
+
+            <!-- Label como botón (puede contener imagen y texto) -->
+            <label for="toggle-menu" class="menu-btn" aria-hidden="false">
+                <span class="menu-text">☰ Menú desplegable</span>
+            </label>
+
+            <!-- Creamos los enlaces que tendrá el menú desplegable -->
+            <div class="menu-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/2galeria.html">Fotos Galeria</a>
+                <a href="../paginas/3reservahotel.html">Reserva hotel</a>
+                <a href="../paginas/4multimedia.html">Música y vídeos</a>
+                <a href="../paginas/5css.html">Hoja de estilos</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal, menu central -->
+        <main id="centro">
+            <h2 class="galeriaTitulo">
+                <img src="../imagenes/serana.png" alt="serana" class="kitIMGh2">
+                Razas presentes en The Elder Scrolls V: Skyrim
+                <img src="../imagenes/aela.png" alt="aela" class="kitIMGh2">
+            </h2>
+
+            <table id="tablaGaleria">
+                <br>
+                <tr>
+                    <td>
+                        <a href="../imagenes/alto_elfo.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/alto_elfo.png" alt="alto_elfo" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Alto Elfo</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/argoniano.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/argoniano.png" alt="argoniano" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Argoniano</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/dummer.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/dummer.png" alt="dummer" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Dummer</i></b></p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <a href="../imagenes/breton.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/breton.png" alt="breton" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Breton</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/guardia_rojo.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/guardia_rojo.png" alt="guardia_rojo" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Guardia Rojo</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/imperial.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/imperial.png" alt="imperial" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Imperial</i></b></p>
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td>
+                        <a href="../imagenes/khajita.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/khajita.png" alt="khajita" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Khajiita</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/nordico.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/nordico.png" alt="nordico" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Nordico</i></b></p>
+                    </td>
+                    <td>
+                        <a href="../imagenes/orco.png" target="_blank" rel="noopener noreferrer"><img src="../imagenes/orco.png" alt="orco" class="img_tabla"></a>
+                        <p style="color:darkorchid;"><b><i>Orco</i></b></p>
+                    </td>
+                </tr>
+            </table>
+            
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside id="derecha">
+            <a href="https://bethesda.net/es/dashboard" target="_blank">                        <!-- Este es el enlace de la imagen -->
+                <img src="../imagenes/bethesda.png" alt="Logo Bethesda" class="logo">    <!-- Aquí definimos la url de la img; después el texto alternativo que saldría si la img no se encuentra;
+                                                                                    y por último el ancho (width) de la imagen. En mi caso le puse un class="logo", esto lo que hace es que
+                                                                                    desde el css pueda modificarlo, al poner el mismo "class" a todas, solo tendré que definir 1 -->
+            </a>
+            <a href="https://elderscrolls.bethesda.net/es" target="_blank">
+                <img src="../imagenes/skyrim.png" alt="Logo Skyrim" class="logo">
+            </a>
+
+            <a href="https://fallout.bethesda.net/es" target="_blank">
+                <img src="../imagenes/fallout.png" alt="Logo Fallout" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/doom" target="_blank">
+                <img src="../imagenes/doom.png" alt="Logo Doom" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/starfield" target="_blank">
+                <img src="../imagenes/starfield.png" alt="Logo Starfield" class="logo">
+            </a>
+        </aside>
+
+        <!-- Pie de página -->
+        </div>
+        <footer>
+           <p>Derechos reservados © 2025 <br> <b><i>@ Ichi</i></b> / Jose Aguilar</p>
+        </footer>
+</body>
+</html>
