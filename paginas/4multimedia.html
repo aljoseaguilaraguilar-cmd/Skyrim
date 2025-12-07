@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovngarde</title> <!-- Título de la pestaña -->
+    <link rel="icon" type="imagen" href="../imagenes/favicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="../estilos.css"> <!-- Enlazo el archivo CSS externo -->
+</head>
+<body>
+
+    <header> <!-- Esta etiqueta sirve para definir la cabecera -->
+            <img src="../imagenes/skyrimTitulo.png" alt="Titulo Skyrim">
+    </header>
+
+    <div id="contenedor"> <!-- Contenedor principal, aquí meteremos todo el contenido de mi web y le daré un "ID" para que
+                            el css pueda modificarlo -->
+    
+        
+        <!-- Barra lateral izquierda -->
+        <aside id="izquierda">
+            <!-- Checkbox oculto que controla el desplegable -->
+            <input type="checkbox" id="toggle-menu" />
+
+            <!-- Label como botón (puede contener imagen y texto) -->
+            <label for="toggle-menu" class="menu-btn" aria-hidden="false">
+                <span class="menu-text">☰ Menú desplegable</span>
+            </label>
+
+            <!-- Creamos los enlaces que tendrá el menú desplegable -->
+            <div class="menu-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/2galeria.html">Fotos Galeria</a>
+                <a href="../paginas/3reservahotel.html">Reserva hotel</a>
+                <a href="../paginas/4multimedia.html">Música y vídeos</a>
+                <a href="../paginas/5css.html">Hoja de estilos</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal, menu central -->
+        <main id="centro">
+            <h2 class="multimedia">
+                <img src="../imagenes/video.png" alt="video" class="audioVideo">
+                Reproducciones de audio y video
+                <img src="../imagenes/audio.png" alt="audio" class="audioVideo">
+            </h2>
+
+            <!-- Div de enlaces de audio y video: -->
+            <div class="contenedorEnlaces">
+                <div>
+                    <h3 class="fontEnlaces">Carga de audio con enlaces</h3>
+                    <p>1. Audio mp3: <a href="../sonidos_videos/fusrodah.mp3" target="_blank"> Enlace audio mp3 </a></p>
+                    <p>2. Audio ogg: <a href="../sonidos_videos/distant_dragon_roar.ogg" target="_blank"> Enlace audio ogg </a></p>
+                    <p>3. Audio flac: <a href="../sonidos_videos/new_location.flac" target="_blank"> Enlace audio flac </a></p>
+                </div>
+                
+                <div>
+                    <h3 class="fontEnlaces">Carga de video con enlaces</h3>
+                    <p>1. Video mp4: <a href="../sonidos_videos/skyrim_trailer.mp4" target="_blank"> Enlace vídeo mp4 </a></p>
+                    <p>2. Video ts: <a href="../sonidos_videos/starfield_trailer.ts" target="_blank"> Enlace vídeo ts </a></p>
+                    <p>3. Video webm: <a href="../sonidos_videos/new_vegas_trailer.webm" target="_blank"> Enlace vídeo webm </a></p>
+                </div>
+            </div> 
+
+            <!-- Ejemplos de audio insertado en la web: -->
+            <h3 style="text-align: center;" class="fontEnlaces">Ejemplos de audio:</h3>
+            <div class="contenedorAudios">
+                <div>
+                    <p style="text-align:center;"><i><b>Sonido mp3:</b></i></p>
+                        <audio controls>
+                            <source src="../sonidos_videos/fusrodah.mp3" type="audio/mp3">
+                            Tú buscador no soporta este tipo de audio.
+                        </audio>
+                </div>
+                <div>
+                    <p style="text-align:center;"><i><b>Sonido ogg:</b></i></p>
+                         <audio controls>
+                            <source src="../sonidos_videos/distant_dragon_roar.ogg" type="audio/ogg">
+                            Tú buscador no soporta este tipo de audio.
+                        </audio>
+                </div>
+                <div>
+                    <p style="text-align:center;"><i><b>Sonido flac:</b></i></p>
+                        <audio controls>
+                            <source src="../sonidos_videos/new_location.flac" type="audio/flac">
+                            Tú buscador no soporta este tipo de audio.
+                        </audio>
+                </div>
+            </div>
+            <!-- Ejemplos de video insertado en la web: -->
+            <h3 style="text-align: center;" class="fontEnlaces">Ejemplos de vídeo:</h3>
+            <div class="contenedorVideos">
+                <div>
+                    <p style="text-align:center;"><i><b>Video mp4:</b></i></p>
+                        <video width="320" height="240" controls>
+                            <source src="../sonidos_videos/skyrim_trailer.mp4" type="video/mp4">
+                            Tú buscador no soporta este tipo de vídeo.
+                        </video>
+                </div>
+                <div>
+                     <p style="text-align:center;"><i><b>Video ts:</b></i></p>
+                        <video width="320" height="240" controls>
+                            <source src="../sonidos_videos/starfield_trailer.ts" type="video/ts">
+                            <source src="../sonidos_videos/starfield_trailer.mp4" type="video/mp4"> <!-- Segundo source por compatibilidad -->
+                            Tú buscador no soporta este tipo de vídeo.                              <!-- El Mensaje alternativo solo aparece si el tipo de video .ogv, .mp4 lo reconoce el buscador,es caso de chrome al no reconocer el .ogv no muestra ni el mensaje en pantalla -->
+                        </video>                                                                    <!-- hay 2 soluciones, la primera es poner un enlace alternativo como puse yo, o crear el mensaje con JS -->
+                </div>
+                <div>
+                     <p style="text-align:center;"><i><b>Video webm:</b></i></p>
+                        <video width="320" height="240" controls>
+                            <source src="../sonidos_videos/new_vegas_trailer.webm" type="video/webm">
+                            Tú buscador no soporta este tipo de vídeo.
+                        </video>
+                </div>
+            </div>
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside id="derecha">
+            <a href="https://bethesda.net/es/dashboard" target="_blank">                        <!-- Este es el enlace de la imagen -->
+                <img src="../imagenes/bethesda.png" alt="Logo Bethesda" class="logo">    <!-- Aquí definimos la url de la img; después el texto alternativo que saldría si la img no se encuentra;
+                                                                                    y por último el ancho (width) de la imagen. En mi caso le puse un class="logo", esto lo que hace es que
+                                                                                    desde el css pueda modificarlo, al poner el mismo "class" a todas, solo tendré que definir 1 -->
+            </a>
+            <a href="https://elderscrolls.bethesda.net/es" target="_blank">
+                <img src="../imagenes/skyrim.png" alt="Logo Skyrim" class="logo">
+            </a>
+
+            <a href="https://fallout.bethesda.net/es" target="_blank">
+                <img src="../imagenes/fallout.png" alt="Logo Fallout" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/doom" target="_blank">
+                <img src="../imagenes/doom.png" alt="Logo Doom" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/starfield" target="_blank">
+                <img src="../imagenes/starfield.png" alt="Logo Starfield" class="logo">
+            </a>
+        </aside>
+
+        <!-- Pie de página -->
+        </div>
+        <footer>
+           <p>Derechos reservados © 2025 <br> <b><i>@ Ichi</i></b> / Jose Aguilar</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovngarde</title> <!-- Título de la pestaña -->
+    <link rel="icon" type="imagen" href="../imagenes/favicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="../estilos.css"> <!-- Enlazo el archivo CSS externo -->
+</head>
+<body>
+
+    <header> <!-- Esta etiqueta sirve para definir la cabecera -->
+            <img src="../imagenes/skyrimTitulo.png" alt="Titulo Skyrim">
+    </header>
+
+    <div id="contenedor"> <!-- Contenedor principal, aquí meteremos todo el contenido de mi web y le daré un "ID" para que
+                            el css pueda modificarlo -->
+    
+        
+        <!-- Barra lateral izquierda -->
+        <aside id="izquierda">
+            <!-- Checkbox oculto que controla el desplegable -->
+            <input type="checkbox" id="toggle-menu" />
+
+            <!-- Label como botón (puede contener imagen y texto) -->
+            <label for="toggle-menu" class="menu-btn" aria-hidden="false">
+                <span class="menu-text">☰ Menú desplegable</span>
+            </label>
+
+            <!-- Creamos los enlaces que tendrá el menú desplegable -->
+            <div class="menu-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/2galeria.html">Fotos Galeria</a>
+                <a href="../paginas/3reservahotel.html">Reserva hotel</a>
+                <a href="../paginas/4multimedia.html">Música y vídeos</a>
+                <a href="../paginas/5estilos.html">Hoja de estilos</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal, menu central -->
+        <main id="centro">
+            <h2 class="calendario">
+                <img src="../imagenes/calendario.png" alt="calendario" class="calendarioImg">
+                MI HOTEL reserva online
+            </h2>
+            
+            <form id="formulario">  <!-- Creamos un ID para formulario, esto no es necesario, pero como yo dentro mi "div" centro (que ya está centrado) quiero que dicho formulario este centrado
+                                        le daremos un id y desde el css lo modicaremos, indicandole que este centrado también -->
+                
+                <!-- Parte que nos sirve para rellenar -->
+                <br>
+                <div class="divFormularios"> <!-- Para crear una separación entre el label y el input, creamos un dev donde definiremos:
+                                                                                        display=flex convierte el div en un contenedor flexible; align-items:center controla la alineación vertical; margin-bottom agrega espacio en cada div (lo podemos cambiar por el <br>)  -->
+                    <label for="nombre" style="width: 150px;">Nombre:</label> <!-- Le añadimos el style="width: 150px; por 2 razones: que tenga un ancho fijo y que además al tener dicho ancho fijo, el display flex puede separlo del texo -->
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                
+
+                <div class="divFormularios">
+                    <label for="apellido" style="width: 150px;">Apellido: </label> <!-- Definimos el apellido -->
+                    <input type="text" id="apellido" name="apellido"> <!-- Aquí definimos el tipo de input (text, password, checkbox, radio, etc);
+                                                                después el "id" identificador único; y "name" que es el nombre que tendrá ese campo cuando se envíe el formulario -->  
+                </div>
+
+                <div class="divFormularios">
+                    <label for="tlf" style="width: 150px;">Teléfono: </label> <!-- Definimos el teléfono -->
+                    <input type="texto" id="tlf" name="tlf"> <!-- No hace falta poner <br>, es solo un salto de linea -->
+                </div>
+
+                <div class="divFormularios">
+                    <label for="email" style="width: 150px;">E-mail: </label>
+                    <input type="texto" id="email" name="email">
+                </div>
+
+                <div class="divFormularios">
+                    <label for="numnoches" style="width: 150px;">Número de noches: </label>
+                    <input type="number" id="numnoches" name="numnoches">
+                </div>
+
+                <!-- Parte para desplegar calendario -->
+                <div class="divFormularios">
+                    <label style="margin-right: 58px;">Fecha reserva:</label>
+                    <input type="date" id="fecha" name="fecha" style="margin-right: 2px;">
+                    <input type="submit" value="Enviar">
+                </div>
+
+                <!-- Campo tipo "Radio" -->
+
+                <!-- Div esterior para controlar la fila principal-->
+                <div class="divFormularios">
+                    <label style="width: 150px;">Habitación:</label>
+                
+                        <!-- Div interior para controlar la columna vertical de las elecciones-->
+                        <div style="display: flex; flex-direction: column;">
+                            <label><input type="radio" name="habitacion" value="simple"> Simple</label>
+                            <label><input type="radio" name="habitacion" value="doble"> Doble</label>
+                            <label><input type="radio" name="habitacion" value="matrimonio"> Matrimonio</label>
+                        </div>
+                </div>
+
+                <!-- Campo tipo "CheckBoxes" -->
+
+                <!-- Div esterior para controlar la fila principal-->
+                <div class="divFormularios">
+                     <label style="width: 150px;">Régimen:</label>
+                         <div style="display: flex; flex-direction: column;">
+                            <label><input type="checkbox" name="desayuno" value="desayuno"> Desayuno</label>
+                            <label><input type="checkbox" name="comida" value="comida"> Comida</label>
+                            <label><input type="checkbox" name="cena" value="cena"> Cena</label>
+                        </div>
+                </div>
+
+        
+                <!-- Campo "adjuntar archivo" -->
+                <div class="divFormularios">
+                    <label style="margin-right: 20px;">Adjuntar fotografía: </label>
+                    <input type="file" id="examinar" name="examinar">
+                </div>
+           
+
+                <!-- Añadimos una seccion de comentarios -->
+                <div class="divFormularios">
+                    <label for="comentario" style="margin-right: 60px;">Comentarios: </label>
+                    <textarea id="comentario" name="comentario" rows="5" cols="50" placeholder="Escribe tu comentario aquí..."></textarea><br>
+                </div>
+             
+                <!-- Gestión de botones -->
+                    <label for="comentario">Pulsa "Enviar" para enviar o "Borrar" para limpiar los datos</label>
+                    <br>      
+                    <div style="display: flex; justify-content: flex-start; gap: 280px; margin-top: 10px;"> <!-- Al añadir "gap: X px" puedes definir la distancia entre los elementos del contendor -->
+                    <!-- Botón de enviar a la izquierda -->
+                    <button type="submit">Enviar</button>
+
+                    <!-- Botón de borrar a la derecha -->
+                    <button type="reset">Borrar</button>
+                </div>
+
+            </form>
+
+            
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside id="derecha">
+            <a href="https://bethesda.net/es/dashboard" target="_blank">                        <!-- Este es el enlace de la imagen -->
+                <img src="../imagenes/bethesda.png" alt="Logo Bethesda" class="logo">    <!-- Aquí definimos la url de la img; después el texto alternativo que saldría si la img no se encuentra;
+                                                                                    y por último el ancho (width) de la imagen. En mi caso le puse un class="logo", esto lo que hace es que
+                                                                                    desde el css pueda modificarlo, al poner el mismo "class" a todas, solo tendré que definir 1 -->
+            </a>
+            <a href="https://elderscrolls.bethesda.net/es" target="_blank">
+                <img src="../imagenes/skyrim.png" alt="Logo Skyrim" class="logo">
+            </a>
+
+            <a href="https://fallout.bethesda.net/es" target="_blank">
+                <img src="../imagenes/fallout.png" alt="Logo Fallout" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/doom" target="_blank">
+                <img src="../imagenes/doom.png" alt="Logo Doom" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/starfield" target="_blank">
+                <img src="../imagenes/starfield.png" alt="Logo Starfield" class="logo">
+            </a>
+        </aside>
+
+        <!-- Pie de página -->
+        </div>
+        <footer>
+           <p>Derechos reservados © 2025 <br> <b><i>@ Ichi</i></b> / Jose Aguilar</p>
+        </footer>
+</body>
+</html>

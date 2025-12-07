@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovngarde</title> <!-- Título de la pestaña -->
+    <link rel="icon" type="imagen" href="imagenes/favicon.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlazo el archivo CSS externo -->
+</head>
+<body>
+
+    <header> <!-- Esta etiqueta sirve para definir la cabecera -->
+            <img src="imagenes/skyrimTitulo.png" alt="Titulo Skyrim">
+    </header>
+
+    <div id="contenedor"> <!-- Contenedor principal, aquí meteremos todo el contenido de mi web y le daré un "ID" para que
+                            el css pueda modificarlo -->
+    
+        
+        <!-- Barra lateral izquierda -->
+        <aside id="izquierda">
+        
+            <!-- Checkbox oculto que controla el desplegable -->
+            <input type="checkbox" id="toggle-menu" />
+
+            <!-- Label como botón (puede contener imagen y texto) -->
+            <label for="toggle-menu" class="menu-btn" aria-hidden="false">
+                <span class="menu-text">☰ Menú desplegable</span>
+            </label>
+
+            <!-- Creamos los enlaces que tendrá el menú desplegable -->
+            <div class="menu-links">
+                <a href="index.html">Inicio</a>
+                <a href="paginas/2galeria.html">Fotos Galeria</a>
+                <a href="paginas/3reservahotel.html">Reserva hotel</a>
+                <a href="paginas/4multimedia.html">Música y vídeos</a>
+                <a href="paginas/5css.html">Hoja de estilos</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal, menu central -->
+        <main id="centro">
+            <h2 style="font-family: 'ByteBounce', Arial; font-size: 45px; text-align: center;">Bethesda Softworks</h2>
+            <p><a href="https://es.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dawnguard" target="_blank" rel="noopener noreferrer"><span style="font-size:110%; color:darkred;">Bethesda Softworks LLC </span></a> es una empresa desarrolladora y distribuidora de videojuegos estadounidense fundada en 1986 por Christopher Weaver. Es conocida por ser la creadora de franquicias populares como <b><i>The Elder Scrolls</i></b>, <b><i>Fallout</i></b>, <b><i>Doom</i></b> y <b><i>Wolfenstein</i></b>. La compañía se ha destacado por sus juegos de rol de mundo abierto y su enfoque en la narrativa y la exploración.</p>
+            <br>
+            <p style="font-family: 'ByteBounce', Arial; font-size: 35px;"><b>The Elder Scrolls V: Skyrim</b></p>
+            <p><b>The Elder Scrolls V: Skyrim</b> es un videojuego de rol de acción de mundo abierto desarrollado por <u>Bethesda Game Studios</u> y publicado por <u>Bethesda Softworks</u>. Es la quinta entrega de la serie de fantasía The Elder Scrolls, posterior a Oblivion y predecesor de Online. <img src="imagenes/skyrim_cover.png" alt="skyrim_cover" style="float: right; margin-left: 10px; width: 150px;">
+                Salió a la venta el 11 de noviembre de 2011 para las plataformas Microsoft Windows, Xbox 360 y PlayStation 3. El 26 de julio de 2012 llegaron al mercado tres expansiones descargables: <a href="https://es.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dawnguard" target="_blank" rel="noopener noreferrer">Dawnguard</a>, <a href="https://es.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Hearthfire" target="_blank" rel="noopener noreferrer">Hearthfire</a> y <a href="https://es.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dragonborn" target="_blank" rel="noopener noreferrer">Dragonborn</a>. El 28 de octubre de 2016 fue lanzada una remasterización llamada Skyrim Special Edition, que incluye el juego original y los complementos, así como nuevas características, como gráficos y efectos renovados. Al año siguiente llegó a Nintendo Switch y en 2021 se publicó la versión Anniversary Edition. 
+            <br>
+            <br>
+            <br>
+                La historia se centra en los esfuerzos del Dovahkiin <span style="color:red;">(Sangre de dragón)</span> para derrotar a Alduin, un dragón o <sup><span style="color:purple;">«dovah»</span></sup> que, según la profecía, está destinado a destruir el mundo. La trama se sitúa doscientos años después de los sucesos de Oblivion y tiene lugar en la provincia ficticia de Skyrim. En el transcurso de la aventura, el jugador completa misiones y hace evolucionar a su personaje gracias a la mejora de sus habilidades.
+               <img src="imagenes/alduin_logo.png" alt="alduin_logo" style="float: left; margin-left: 10px; width: 200px;"> A diferencia de los títulos anteriores de la saga, el usuario no selecciona una clase concreta de personaje al inicio de la partida. <i>Skyrim</i> continúa con la tradición de mundo abierto al permitir que el protagonista viaje a cualquier parte del mapa y posponga u omita parcial o totalmente la historia principal.
+            </p>
+
+        </main>
+
+        <!-- Barra lateral derecha -->
+        <aside id="derecha">
+            <a href="https://bethesda.net/es/dashboard" target="_blank">                        <!-- Este es el enlace de la imagen -->
+                <img src="imagenes/bethesda.png" alt="Logo Bethesda" class="logo" target="_blank">    <!-- Aquí definimos la url de la img; después el texto alternativo que saldría si la img no se encuentra;
+                                                                                    y por último el ancho (width) de la imagen. En mi caso le puse un class="logo", esto lo que hace es que
+                                                                                    desde el css pueda modificarlo, al poner el mismo "class" a todas, solo tendré que definir 1 -->
+            </a>
+            <a href="https://elderscrolls.bethesda.net/es" target="_blank">
+                <img src="imagenes/skyrim.png" alt="Logo Skyrim" class="logo">
+            </a>
+
+            <a href="https://fallout.bethesda.net/es" target="_blank">
+                <img src="imagenes/fallout.png" alt="Logo Fallout" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/doom" target="_blank">
+                <img src="imagenes/doom.png" alt="Logo Doom" class="logo">
+            </a>
+
+            <a href="https://bethesda.net/es/game/starfield" target="_blank">
+                <img src="imagenes/starfield.png" alt="Logo Starfield" class="logo">
+            </a>
+        </aside>
+
+        <!-- Pie de página -->
+        </div>
+        <footer>
+           <p>Derechos reservados © 2025 <br> <b><i>@ Ichi</i></b> / Jose Aguilar</p>
+        </footer>
+</body>
+</html>
